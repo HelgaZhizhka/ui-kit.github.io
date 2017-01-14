@@ -39,30 +39,23 @@ $(function () {
     $allTabs = $tabWrapper.find('.ui-tab__content .ui-tab__section'),
     $tabMenu = $tabWrapper.find('.ui-tab__nav .ui-tab__control'),
     $line = $('<div class="line"></div>').appendTo($tabMenu);
-
   $allTabs.not(':first-of-type').hide();
   $tabMenu.filter(':first-of-type').find(':first').width('100%');
-
   $tabMenu.each(function(i) {
     $(this).attr('data-tab', 'tab'+i);
   });
-
   $allTabs.each(function(i) {
     $(this).attr('data-tab', 'tab'+i);
   });
-
   $tabMenu.on('click', function() {
-
     var dataTab = $(this).data('tab'),
       $getWrapper = $(this).closest($tabWrapper);
-
     $getWrapper.find($tabMenu).removeClass('active');
     $(this).addClass('active');
-
     $getWrapper.find('.line').width(0);
     $(this).find($line).animate({'width':'100%'}, 'fast');
-    $getWrapper.find($allTabs).hide();
-    $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
+    $getWrapper.find($allTabs).removeClass('fadeIn').hide();
+    $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').addClass('fadeIn').show();
   });
 
 });
