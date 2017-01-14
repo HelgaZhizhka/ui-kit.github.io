@@ -37,7 +37,7 @@ $(function () {
 
   var $tabWrapper = $('.js-tab'),
     $allTabs = $tabWrapper.find('.ui-tab__content .ui-tab__section'),
-    $tabMenu = $tabWrapper.find('.ui-tab__nav .ui-tab__control');
+    $tabMenu = $tabWrapper.find('.ui-tab__nav .ui-tab__control'),
     $line = $('<div class="line"></div>').appendTo($tabMenu);
 
   $allTabs.not(':first-of-type').hide();
