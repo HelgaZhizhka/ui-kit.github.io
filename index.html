@@ -300,7 +300,7 @@
 										</article>
 									</div>
 								</div>
-								<h4>JQuery tabs</h4>
+								<h4>JQuery tabs variant 1</h4>
 								<div class="ui-tab js-tab">
 									<ul class="ui-tab__nav list_inline">
 										<li class="ui-tab__control list__item active">Tab1</li>
@@ -324,20 +324,114 @@
 										</div>
 									</div>
 								</div>
+								<h4>JQuery tabs variant 2</h4>
+								<div class="ui-tabs ui-tabs_content js-tabs">
+									<ul class="ui-tabs__nav list_inline">
+										<li class="ui-tabs__control list__item active"><span class="ui-tabs__link">Tab1</span></li>
+										<li class="ui-tabs__control list__item"><span class="ui-tabs__link">Tab2</span></li>
+										<li class="ui-tabs__control list__item"><span class="ui-tabs__link">Tab3</span></li>
+										<li class="ui-tabs__control list__item"><span class="ui-tabs__link">Tab4</span></li>
+									</ul>
+									<ul class="ui-tabs__content">
+										<li class="ui-tabs__section active">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</li>
+										<li class="ui-tabs__section">
+											<p>Pellentesque id malesuada nibh.</p>
+										</li>
+										<li class="ui-tabs__section">
+											<p>Lorem</p>
+										</li>
+										<li class="ui-tabs__section">
+											<h5>Dimensions</h5>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</li>
+									</ul>
+								</div>
 							</div>
 							<div class="col-sm-6">
-								<h4>Accordion</h4>
+								<h4>jQuery accordion variant 1</h4>
 								<div class="accordion accordion_primary js-accordion-primary">
 									<div class="accordion__head"><a class="accordion__link js-accordion-link-primary">Active</a></div>
 									<div class="accordion__block">content block 1</div>
 									<div class="accordion__head"><a class="accordion__link js-accordion-link-primary">Inactive</a></div>
 									<div class="accordion__block">content block 2</div>
 								</div>
+								<h4>jQuery accordion variant 2</h4>
+								<div class="ui-accordion js-ui-accordion">
+									<ul class="ui-accordion__list">
+										<li class="ui-accordion__item"><a class="ui-accordion__link">Link 1</a>
+											<ul class="ui-accordion__inner-list">
+												<li class="ui-accordion__inner-item"><a class="ui-accordion__inner-link">Inner link 1</a><a class="ui-accordion__inner-link">Inner link 2</a><a class="ui-accordion__inner-link">Inner link 3</a><a class="ui-accordion__inner-link">Inner link 4</a><a class="ui-accordion__inner-link">Inner link 5</a></li>
+											</ul>
+										</li>
+										<li class="ui-accordion__item"><a class="ui-accordion__link">Link 2</a>
+											<ul class="ui-accordion__inner-list">
+												<li class="ui-accordion__inner-item"><a class="ui-accordion__inner-link">Inner link 1</a><a class="ui-accordion__inner-link">Inner link 2</a><a class="ui-accordion__inner-link">Inner link 3</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
 								<h4>Custom select list</h4>
+								<div class="form">
+									<div class="form__row">
+										<ul data-select="sort-list" class="ui-select ui-select_form ui-select_sm js-select-list">
+											<li class="ui-select__value js-select-value">
+												<input type="hidden">
+											</li>
+											<li class="ui-select__item"><span class="ui-select__text js-select-text">По цене (от меньшей к большей)</span>  <i class="icon icon_select"></i>
+												<ul data-type="sort-list" class="ui-select__list js-select-menu">
+													<li class="ui-select__item"><span class="ui-select__link js-select-link">По цене (от меньшей к большей)</span></li>
+													<li class="ui-select__item"><span class="ui-select__link js-select-link">По цене (от большей к меньшей)</span></li>
+													<li class="ui-select__item"><span class="ui-select__link js-select-link">По дате добавления</span></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
 								<h4>Custom forms element</h4>
+								<h5>Custom input number</h5>
 								<div class="quantity quantity_sm">
 									<div class="quantity__container"><a class="quantity__button quantity__button_down js-quantity-down">&minus;</a>
 										<input type="number" name="quantity" value="1" size="2" min="0" autocomplete="off" class="ui-input quantity__input js-quantity-coast-input"><a class="quantity__button quantity__button_up js-quantity-up">+</a>
+									</div>
+								</div>
+								<h5>Custom checkbox & radio</h5>
+								<div class="form">
+									<div class="form__row">
+										<label>
+											<input type="checkbox" name="brand" class="ui-checkbox"><span class="label">Bosch</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label>
+											<input type="checkbox" name="brand" checked class="ui-checkbox"><span class="label">Bosch</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label>
+											<input type="checkbox" name="brand" disabled class="ui-checkbox"><span class="label">Bosch</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label class="multiline-label">
+											<input type="checkbox" name="brand" class="ui-checkbox"><span class="label">Bosch Bosch Bosch Bosch  Bosch</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label>
+											<input type="radio" name="action" class="ui-radio"><span class="label">Распродажа</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label>
+											<input type="radio" name="action" checked class="ui-radio"><span class="label">Pозница</span>
+										</label>
+									</div>
+									<div class="form__row">
+										<label>
+											<input type="radio" name="action" disabled class="ui-radio"><span class="label">Pозница</span>
+										</label>
 									</div>
 								</div>
 								<h4>Custom pagination</h4>

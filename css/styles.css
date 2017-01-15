@@ -1403,6 +1403,10 @@ h6 {
 ----------------------------------*/
 .accordion__head {
   position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .accordion__head:hover {
   cursor: pointer;
@@ -1821,8 +1825,13 @@ h6 {
 -------------------------------*/
 .list_unstyled,
 .list_menu-badge,
+.ui-tabs__nav,
+.ui-tabs__content,
+.ui-accordion__list,
 .social,
-.ui-pager {
+.ui-pager,
+.ui-select,
+.ui-select__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2620,6 +2629,175 @@ input[type="number"] {
 .ui-input.is-readonly:focus {
   border-color: transparent;
 }
+/*-------------------------------------
+ Custom checkbox styling and modifiers
+--------------------------------------*/
+.ui-checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 25px;
+  height: 25px;
+}
+.ui-checkbox + .label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.ui-checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.ui-checkbox:not(checked) + .label {
+  position: relative;
+  padding: 0 0 0 35px;
+}
+.ui-checkbox:not(checked) + .label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+.ui-checkbox:not(checked) + .label::after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 8px;
+  left: 8px;
+  width: 11px;
+  height: 9px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJBAMAAAAWSsseAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEX///////////////////////////////////////////////////9Ruv0SAAAADHRSTlMAIplmRLsRM8x37t3Hsu74AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADpJREFUCNdjYAACRgYw0DEAkUxnDjCwhDHonDFgqDnBeeYwA4PUmT1ADgP7GhCHgaHmzAQQxXISSAAAa2UNz4itEMcAAAAASUVORK5CYII=");
+}
+.ui-checkbox:checked + .label::before {
+  background-color: #8ebf4a;
+  padding: 1px;
+  background-clip: content-box;
+}
+.ui-checkbox:checked + .label::after {
+  display: block;
+}
+.ui-checkbox:hover + .label::before {
+  border: 2px solid #333;
+}
+.ui-checkbox:disabled + .label,
+.ui-checkbox.disabled + .label {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.ui-checkbox:disabled + .label::before,
+.ui-checkbox.disabled + .label::before {
+  border: 1px solid #b7b7b7;
+}
+.ui-checkbox:disabled + .label::after,
+.ui-checkbox.disabled + .label::after {
+  display: none;
+}
+/*-------------------------------
+ Custom radio styling and modifiers
+---------------------------------*/
+.ui-radio {
+  vertical-align: middle;
+  margin: 0 3px 0 0;
+  width: 25px;
+  height: 25px;
+}
+.ui-radio + .label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.ui-radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.ui-radio:not(checked) + .label {
+  position: relative;
+  padding: 0 0 0 35px;
+  font-family: 'Open Sans', 'Arial', 'sans-serif';
+  font-size: 16px;
+  color: #5e5e5e;
+}
+.ui-radio:not(checked) + .label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #cac8c6;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.ui-radio:not(checked) + .label::after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #fe7849;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.ui-radio:checked + .label {
+  color: #5e5e5e;
+}
+.ui-radio:checked + .label::after {
+  display: block;
+}
+.ui-radio:hover + .label::before {
+  border: 2px solid #333;
+}
+.ui-radio:disabled + .label,
+.ui-radio.disabled + .label {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.ui-radio:disabled + .label::before,
+.ui-radio.disabled + .label::before {
+  border: 1px solid #b7b7b7;
+}
+.ui-radio:disabled + .label::after,
+.ui-radio.disabled + .label::after {
+  display: none;
+}
+/*-------------------------------------------
+ Multiline label for custom checkboc & radio
+----------------------------------------------*/
+.multiline-label {
+  display: block;
+  padding-left: 35px;
+}
+.multiline-label .ui-checkbox:not(checked) + .label,
+.multiline-label .ui-radio:not(checked) + .label {
+  padding: 0;
+  font-weight: 400;
+}
+.multiline-label .ui-checkbox:not(checked) + .label::before,
+.multiline-label .ui-radio:not(checked) + .label::before {
+  left: -35px;
+}
+.multiline-label .ui-checkbox:not(checked) + .label::after {
+  left: -28px;
+}
+.multiline-label .ui-radio:not(checked) + .label::after {
+  left: -27px;
+}
+/*-------------------------------
+ Custom tabs only css styling
+---------------------------------*/
 .tabs {
   margin-bottom: 50px;
   font-size: 0;
@@ -2682,7 +2860,7 @@ input[type="number"] {
   transition: all 0.5s ease-out;
 }
 /*-------------------------------
- Custom tabs styling
+ Custom ui-tabs styling
 ---------------------------------*/
 .ui-tab__control {
   position: relative;
@@ -2721,6 +2899,114 @@ input[type="number"] {
   background-color: #fe7849;
   top: 0;
   left: 0;
+}
+/*-------------------------------
+ Custom ui-tabs styling for simple page
+---------------------------------*/
+.ui-tabs__section {
+  display: none;
+}
+.ui-tabs__section.active {
+  display: block;
+}
+.ui-tabs__control {
+  display: inline;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ui-tabs_content .ui-tabs__nav {
+  margin-bottom: 10px;
+}
+.ui-tabs_content .ui-tabs__control {
+  display: inline-block;
+  background-color: #fff;
+  color: #fe7849;
+}
+.ui-tabs_content .ui-tabs__control:hover .ui-tabs__link,
+.ui-tabs_content .ui-tabs__control.active .ui-tabs__link {
+  background-color: #fe7849;
+  color: #fff;
+}
+.ui-tabs_content .ui-tabs__link {
+  display: inline-block;
+  height: 34px;
+  line-height: 32px;
+  padding: 0 20px;
+  text-align: center;
+}
+.ui-tabs_content .ui-tabs__section {
+  min-height: 200px;
+}
+/*--------------------------------
+   Accordion list styling
+----------------------------------*/
+.ui-accordion__item {
+  min-height: 30px;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ui-accordion__item:hover {
+  cursor: pointer;
+}
+.ui-accordion__item.active {
+  margin-bottom: 0;
+}
+.ui-accordion__item.active .ui-accordion__link {
+  background-color: #fe7849;
+  color: #fff;
+}
+.ui-accordion__item.active .ui-accordion__link::after {
+  background-image: url("../images/spritePng.png");
+  background-position: 0px 0px;
+  width: 12px;
+  height: 8px;
+}
+.ui-accordion__link {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  background-color: #e8e8e8;
+  color: #5e5e5e;
+  font-weight: 700;
+}
+.ui-accordion__link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 10px;
+  background-image: url("../images/spritePng.png");
+  background-position: 0px -13px;
+  width: 12px;
+  height: 8px;
+}
+.ui-accordion__link:hover {
+  color: #5e5e5e;
+}
+.ui-accordion__inner-list {
+  display: none;
+  list-style: none;
+}
+.ui-accordion__inner-item {
+  margin-bottom: 2px;
+}
+.ui-accordion__inner-link {
+  display: block;
+  text-decoration: none;
 }
 /*--------------------------------
  Social links module styling
@@ -2892,6 +3178,11 @@ input[type="number"] {
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 .quantity__input {
   display: inline-block;
@@ -2922,6 +3213,112 @@ input[type="number"] {
   width: 100px;
   height: 50px;
   font-size: 16px;
+}
+/*---------------------------------------
+ Custom select list styling and modifiers
+-----------------------------------------*/
+.ui-select__item {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.ui-select__item.ui-select__value {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+.ui-select__item .icon_select {
+  background-image: url("../images/spritePng.png");
+  background-position: 0px 0px;
+  width: 12px;
+  height: 8px;
+}
+.ui-select.active .ui-select__list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.ui-select.active .icon_select {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.ui-select__list {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  pointer-events: none;
+  z-index: 1100;
+}
+.ui-select__link {
+  display: block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.ui-select__text {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ui-select .icon_select {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+}
+.ui-select_form {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.ui-select_form > .ui-select__item {
+  padding: 0 24px 0 10px;
+  background-color: #fff;
+  border: 1px solid #cac8c6;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+.ui-select_form .ui-select__list {
+  background-color: #fff;
+  border: 1px solid #cac8c6;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+.ui-select_form .ui-select__list .ui-select__link {
+  height: 26px;
+  padding: 0 20px 0 10px;
+  line-height: 26px;
+  color: #5e5e5e;
+}
+.ui-select_form .ui-select__list .ui-select__link:hover {
+  background-color: #8ebf4a;
+  color: #fff;
+}
+.ui-select_sm {
+  height: 28px;
+  min-width: 300px;
+}
+.ui-select_sm > .ui-select__item {
+  line-height: 28px;
+}
+.ui-select_xs {
+  width: 65px;
+  height: 38px;
+}
+.ui-select_xs > .ui-select__item {
+  line-height: 38px;
 }
 /*--------------------------
    States modules styling
