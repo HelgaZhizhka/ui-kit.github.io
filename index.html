@@ -515,9 +515,66 @@
 							</div>
 						</div>
 					</div>
+					<div class="accordion__head"><a class="accordion__link js-accordion-link">Table</a></div>
+					<div class="accordion__block">
+						<h4>Table</h4>
+						<table class="table table_striped">
+							<tbody>
+								<tr>
+									<td>Рисование, черчение рисунков</td>
+									<td>2 часа</td>
+								</tr>
+								<tr>
+									<td>Ознакомление с деревом</td>
+									<td>2 часа</td>
+								</tr>
+								<tr>
+									<td>Ознакомление с инструментом</td>
+									<td>2 часа</td>
+								</tr>
+								<tr>
+									<td>Покрытие дощечки цветными морилками</td>
+									<td>2 часа</td>
+								</tr>
+								<tr>
+									<td>Контурная резьба по дереву</td>
+									<td>2 часа</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4>Responsive table</h4>
+						<table class="table table_shop table_responsive">
+							<thead>
+								<tr>
+									<th>Товары</th>
+									<th>Скидка</th>
+									<th>Цена</th>
+									<th>Количество</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span>Струбцина трубная 3/4"</span></td>
+									<td>0%</td>
+									<td><span>1 179,99 руб.</span></td>
+									<td>
+										<div class="quantity quantity_sm">
+											<div class="quantity__container"><a class="quantity__button quantity__button_down js-quantity-down">&minus;</a>
+												<input type="number" name="quantity" value="1" size="2" min="0" autocomplete="off" class="ui-input quantity__input js-quantity-coast-input"><a class="quantity__button quantity__button_up js-quantity-up">+</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="is-block"><a href="#" class="link">Удалить</a></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<div class="accordion__head"><a class="accordion__link js-accordion-link">Alert window</a></div>
 					<div class="accordion__block">
-						<h4>Окна сообщений</h4>
+						<h4>Alerts</h4>
 						<div class="alert alert_danger"><a href="#" class="alert__close">✕</a>
 							Example alert danger
 							Qui et choro ubique denique, vim ei accumsan deseruisse argumentum. Usu cu dicant scripta dignissim, usu omnis paulo
@@ -527,6 +584,62 @@
 							Qui et choro ubique denique, vim ei accumsan deseruiss
 						</div>
 						<p class="text-danger">Example text danger</p>
+					</div>
+					<div class="accordion__head"><a class="accordion__link js-accordion-link">Simple flex grid</a></div>
+					<div class="accordion__block">
+						<h4>Simple flex grid (column - unlimited, gutter=30px, col- : padding-left:15px; padding-right:15px)</h4>
+						<div class="grid">
+							<div class="grid__row grid__row_sm">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+							</div>
+							<div class="grid__row grid__row_md">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+							</div>
+							<div class="grid__row grid__row_lg">
+								<div class="grid__item">
+									<div class="grid">
+										<div class="grid__row grid__row_lg">
+											<div class="grid__item">nested 1</div>
+											<div class="grid__item">nested 2</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+							</div>
+						</div>
+						<p>To use professional flexbox grid - http://flexboxgrid.com/, or bootrstrap 4 grid - https://v4-alpha.getbootstrap.com/layout/grid/</p>
+					</div>
+					<div class="accordion__head"><a class="accordion__link js-accordion-link">Grid bases bootstrap3</a></div>
+					<div class="accordion__block">
+						<h4>Example grid bases bootstrap3 (column - 12, gutter=30px: column - padding-left:15px; padding-right:15px)</h4>
+						<div class="example-grid">
+							<div class="row">
+								<div class="col-lg-12">lg-12</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">md-6</div>
+								<div class="col-md-6">md-6</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4">sm-4</div>
+								<div class="col-sm-4">sm-4</div>
+								<div class="col-sm-4">sm-4</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2">xs-2</div>
+								<div class="col-xs-2">xs-2</div>
+								<div class="col-xs-2">xs-2</div>
+								<div class="col-xs-2">xs-2</div>
+								<div class="col-xs-2">xs-2</div>
+								<div class="col-xs-2">xs-2</div>
+							</div>
+						</div>
+						<p>gutter - variable, count columns also, but it should be an even number</p>
 					</div>
 				</div>
 			</div>
